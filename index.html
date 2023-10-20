@@ -12,8 +12,12 @@
     <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <!-- main style -->
     <link href="css/style.css" rel="stylesheet">
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -220,15 +224,19 @@
                             
                             <!-- single work -->
                             <div class="col-md-4 col-sm-6 ads film">
-                                <a id="demo02" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/03.jpg" alt="image" class="img-responsive" />
+                                <a id="demo02" href=#modal-02 class="portfolio_item"><img src="img/portfolio/03.jpg" alt="image" class="img-responsive" />
                                     <div class="portfolio_item_hover">
                                         <div class="portfolio-border clearfix">
-                                            <div class="item_info"> <span>Floating mockups</span> <em>Ads / film</em> </div>
+                                            <div class="item_info">
+                                                <span>Floating mockups</span>
+                                                <em>Ads / film</em>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <!-- end single work -->
+
                             
                         </div>
                         <!-- end portfolio_container -->
@@ -315,6 +323,35 @@
         </div>
     </div>
 
+     <!--DEMO01-->
+     <div id="modal-02" class="popup-modal">
+        <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+        <!-- <div  id="btn-close-modal" class="close-modal-02">  -->
+        <div id="btn-close-modal2" class="close-modal-02 close-popup-modal"> <i class="ion-close-round"></i> </div>
+        <div class="clearfix"></div>
+        <div class="modal-content">
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Demo Eines<br /> Web-Studios</h2>
+                        <div class="h-50"></div>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> <img src="img/portfolio/02.jpg" alt="" class="img-responsive" />
+                        <br />
+                        <br />
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!--  plugins  -->
@@ -322,7 +359,35 @@
     <script src="js/plugins.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script> 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/animatedModal.js"></script>
+    <script>
+
+        //demo 01
+        $("#demo01").animatedModal();
+
+        //demo 02
+        $("#demo02").animatedModal({
+            animatedIn:'bounceInUp',
+            animatedOut:'bounceOutDown',
+            color:'#FFFFFF',
+            // Callbacks
+            beforeOpen: function() {
+                console.log("The animation was called");
+            },           
+            afterOpen: function() {
+                console.log("The animation is completed");
+            }, 
+            beforeClose: function() {
+                console.log("The animation was called");
+            }, 
+            afterClose: function() {
+                console.log("The animation is completed");
+            }
+        });
+
+    </script>
 
     <!--  main script  -->
     <script src="js/custom.js"></script>
