@@ -103,8 +103,8 @@ $(document).ready(function () {
 
     });
 
-    //animatedModal
-    $("#demo01,#demo02").animatedModal();
+    // //animatedModal
+    // $("#demo01,#demo02").animatedModal();
 
     // Contact Form 	
 
