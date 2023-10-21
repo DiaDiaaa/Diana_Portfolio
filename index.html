@@ -199,10 +199,10 @@
                         <div class="categories-grid wow fadeInLeft">
                             <nav class="categories">
                                 <ul class="portfolio_filter">
-                                    <li><a href="" class="active" data-filter="*">All</a></li>
-                                    <li><a href="" data-filter=".game">Game Design</a></li>
-                                    <li><a href="" data-filter=".code">Programming</a></li>
-                                    <li><a href="" data-filter=".film">Film / Journal</a></li>
+                                    <li class="active" data-filter="*"><a href="">All</a></li>
+                                    <li data-filter=".game"><a href="" >Game Design</a></li>
+                                    <li data-filter=".code"><a href="">Programming</a></li>
+                                    <li data-filter=".film"><a href="">Film / Journal</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -212,7 +212,7 @@
                         <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
                             <!-- single work -->
                             <div class="col-md-4 col-sm-6  fashion code">
-                                <a id="demo01" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/01.jpg" alt="image" class="img-responsive" />
+                                <a id="demo01" href="#modal-01" class="portfolio_item"> <img src="img/portfolio/01.jpg" alt="image" class="img-responsive" />
                                     <div class="portfolio_item_hover">
                                         <div class="portfolio-border clearfix">
                                             <div class="item_info"> <span>Mockups in seconds</span> <em>Fashion / code</em> </div>
@@ -223,7 +223,7 @@
                             <!-- end single work -->
                             
                             <!-- single work -->
-                            <div class="col-md-4 col-sm-6 ads film">
+                            <div class="col-md-4 col-sm-6 code film">
                                 <a id="demo02" href=#modal-02 class="portfolio_item"><img src="img/portfolio/03.jpg" alt="image" class="img-responsive" />
                                     <div class="portfolio_item_hover">
                                         <div class="portfolio-border clearfix">
@@ -298,9 +298,9 @@
     <!-- ./contact -->
 
     <!--DEMO01-->
-    <div id="animatedModal" class="popup-modal">
+    <div id="modal-01" class="popup-modal">
         <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-        <div id="btn-close-modal1" class="close-animatedModal close-popup-modal"> <i class="ion-close-round"></i> </div>
+        <div id="btn-close-modal1" class="close-modal-01 close-popup-modal"> <i class="ion-close-round"></i> </div>
         <div class="clearfix"></div>
         <div class="modal-content">
             <div class="container">
@@ -365,27 +365,31 @@
     <script>
 
         //demo 01
-        $("#demo01").animatedModal();
+        $("#demo01").animatedModal({
+            animatedIn:'zoomIn',
+            animatedOut:'zoomOut',
+            color:'#FFFFFF',});
 
         //demo 02
         $("#demo02").animatedModal({
-            animatedIn:'bounceInUp',
-            animatedOut:'bounceOutDown',
+            animatedIn:'zoomIn',
+            animatedOut:'zoomOut',
             color:'#FFFFFF',
             // Callbacks
-            beforeOpen: function() {
-                console.log("The animation was called");
-            },           
-            afterOpen: function() {
-                console.log("The animation is completed");
-            }, 
-            beforeClose: function() {
-                console.log("The animation was called");
-            }, 
-            afterClose: function() {
-                console.log("The animation is completed");
-            }
+            // beforeOpen: function() {
+            //     console.log("The animation was called");
+            // },           
+            // afterOpen: function() {
+            //     console.log("The animation is completed");
+            // }, 
+            // beforeClose: function() {
+            //     console.log("The animation was called");
+            // }, 
+            // afterClose: function() {
+            //     console.log("The animation is completed");
+            // }
         });
+        const filterButtons = document.querySelector("")
 
     </script>
 
