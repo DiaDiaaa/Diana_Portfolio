@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 2023</title>
+    <link rel="stylesheet" href="css/portfolio.style.css">
+</head>
+<body>
+
+    <header>
+        <div class="portfolio-title">
+            <h1>Portfolio 2023</h1>
+        </div>
+        
+    </header>
+    
+    <section class="name-info">
+        <h1>Diana Yee</h1>
+        <h2>Game Designer | Creative Thinker</h2>
+    </section>
+
+    <!-- <div class="gallery-container">
+        <div class="gallery-item" style="background-image: url('image1.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('image2.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('image3.jpg');"></div>
+    </div> -->
+
+
+    <section>
+        <h2>Introduction</h2>
+        <p>A story designer, game developer, and programmer dedicated to exploring psychological interactions and understanding unique emotional needs. In my work, I emphasize that the end of a story is not the destination but the beginning of the next journey. Each of my games has its own merits, showcasing diverse styles and offering unique emotional experiences. Through this portfolio, I aim to guide players in exploring profound psychological interactions and experiencing the delicate representation of special emotional needs in the gaming world. I hope you can discover everyone's unique story within my creations.</p>
+    </section>
+
+    <section>
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+            <a href="#">View Project</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: linkedin.com/yourusername</p>
+        <p>GitHub: github.com/yourusername</p>
+    </section>
+
+    <div id="back-to-top">↑ Back to Top</div>
+
+    <script>
+        // Back to Top Button Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            var backToTopButton = document.getElementById('back-to-top');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            };
+
+            backToTopButton.onclick = function () {
+                // Scroll to the top with a smooth animation
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+        });
+    </script>
+</body>
+</html>
