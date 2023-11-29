@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diana</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- main style -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">
+
+            <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+            </div>
+
+        </div>
+    </div>
+    <!-- ./Preloader -->
+    
+    <!-- header -->
+    <header class="navbar-fixed-top">
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">experience</a></li>
+                <li><a href="index.html">projects</a></li>
+                <!-- <li><a href="pages/portfolio2023.html">Portfolio 2023</a></li> -->
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ./header -->
+    
+    <!-- contact -->
+    <div class="section" id="contact">
+        <div class="container">
+            <div class="col-md-12">
+                <h1 class="size-50">Contact  Me</h1>
+                <p>"你好“是我们关系的起点</p>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up">
+                <h3>Phone Number</h3>
+                <p>+510 631 8994</p>
+                <h3> Mobile Number</h3>
+                <p>+510 631 8994</p>
+                <h3>Email</h3>
+                <p>dimyee@ucsc.edu</p>
+
+                <!-- <h3>Social Network</h3>
+
+                <ul class="social">
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
+                </ul> --> 
+                <div class="clearfix"></div>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-8" data-aos="fade-up">
+                <form class="contact-bg" id="contact-form" name="contact" method="post" novalidate="novalidate">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" />
+                    <input type="email" name="email" class="form-control" placeholder="Your E-mail" />
+                    <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
+                    <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px"></textarea>
+                    <button id="submit" type="submit" name="submit" class="btn btn-glance">Send</button>
+                    <div id="success">
+                        <p class="green textcenter"> Your message was sent successfully! I will be in touch as soon as I can. </p>
+                    </div>
+                    <div id="error">
+                        <p> Something went wrong, try refreshing and submitting the form again. </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ./contact -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!--  plugins  -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script> 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/animatedModal.js"></script>
+    <script src="js/portfolio_filter.js"></script>
+    <script>
+
+        //demo 01
+        $("#demo01").animatedModal({
+            animatedIn:'zoomIn',
+            animatedOut:'zoomOut',
+            color:'#FFFFFF',});
+
+        //demo 02
+        $("#demo02").animatedModal({
+            animatedIn:'zoomIn',
+            animatedOut:'zoomOut',
+            color:'#FFFFFF',
+        });
+    </script>
+
+    <!--  main script  -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

@@ -503,10 +503,20 @@ a.active {
 }
 
 .portfolio_item {
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Set the height equal to the width to make it squared */
     position: relative;
     overflow: hidden;
-    display: block;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
     margin-bottom: 30px;
+}
+
+.portfolio_item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .portfolio_item .portfolio_item_hover {
@@ -643,6 +653,104 @@ a.active {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
     line-height: 50px;
+}
+
+.cute-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+
+.cute-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #d9c4dd;
+    border-radius: 30px;
+    border: 2px solid #d9c4dd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cute-button:hover {
+    background-color: #f0dde6;
+    color: #ff7e67;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gallery-item {
+    width: 180px; /* Adjust the width as needed */
+    height: 180px; /* Adjust the height as needed */
+    margin: 5px; /* Adjust the margin to make items closely collide */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+.image-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-row img {
+    width: calc(33.33% - 10px); /* Adjust the width and margin as needed */
+    margin-right: 5px; /* Adjust the margin between images */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.image-row img:last-child {
+    margin-right: 0;
+}
+.center-text {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin-top as needed */
+    margin-bottom: 50px;
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    font-size: 15px;
+    letter-spacing: 2px;
+    position: relative;
+    color: #218380;
+    margin-left: 40px;
+    font-weight: 700;
+}
+.center-header {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin-top as needed */
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    position: relative;
+    color: #218380;
+    margin-left: 40px;
+    font-weight: 700;
 }
 
 /* contact
