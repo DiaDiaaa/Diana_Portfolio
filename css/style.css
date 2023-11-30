@@ -728,6 +728,24 @@ a.active {
 .image-row img:last-child {
     margin-right: 0;
 }
+
+.image-row2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -5px; /* Adjust margin to create spacing between images */
+}
+
+.image-row2 img {
+    width: calc(50% - 10px); /* Adjust the width and margin as needed */
+    border-radius: 5px;
+    object-fit: cover;
+    margin: 0 5px; /* Adjust the margin between images */
+}
+
+.image-row2 img:last-child {
+    margin-right: 0;
+}
+
 .center-text {
     text-align: center;
     margin-top: 50px; /* Adjust the margin-top as needed */
@@ -752,6 +770,7 @@ a.active {
     margin-left: 40px;
     font-weight: 700;
 }
+
 
 /* contact
 ==================================================*/
