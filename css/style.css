@@ -69,7 +69,8 @@ h4:before {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    background-color: #FFFF;
+    font-size: 18px;
     line-height: 24px;
 }
 
@@ -81,7 +82,6 @@ body {
 .h-50 {
     height: 50px;
 }
-
 
 /* preloader
 ==================================================*/
@@ -297,20 +297,6 @@ a.active {
     height: 100vh;
 }
 
-.home-name {
-    color: #FFFFFF; /* This will change the text color of the <h4> element to red. */
-}
-.home-name:before {
-    position: absolute;
-    width: 30px;
-    left: -40px;
-    content: "";
-    display: block;
-    height: 2px;
-    background: #FFFFFF;
-    top: 9px;
-}
-
 
 /* about section
 ==================================================*/
@@ -332,7 +318,6 @@ a.active {
     left: 50px;
     z-index: 1
 }
-
 
 /* experience section
 ==================================================*/
@@ -713,6 +698,13 @@ a.active {
 .gallery-item:hover img {
     transform: scale(1.1);
 }
+
+.center-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
 .image-row {
     display: flex;
     justify-content: space-between;
@@ -726,6 +718,22 @@ a.active {
 }
 
 .image-row img:last-child {
+    margin-right: 0;
+}
+
+.image-row-auto {
+    display: auto;
+    justify-content: space-between;
+}
+
+.image-row-auto img {
+    width: calc(33.33% - 10px); /* Adjust the width and margin as needed */
+    margin-right: 5px; /* Adjust the margin between images */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.image-row-auto img:last-child {
     margin-right: 0;
 }
 
@@ -759,11 +767,11 @@ video {
 
 .center-text {
     text-align: center;
-    margin-top: 50px; /* Adjust the margin-top as needed */
-    margin-bottom: 50px;
+    margin-top: 25px; /* Adjust the margin-top as needed */
+    margin-bottom: 25px;
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 2px;
     position: relative;
     color: #218380;
@@ -772,7 +780,7 @@ video {
 }
 .center-header {
     text-align: center;
-    margin-top: 50px; /* Adjust the margin-top as needed */
+    margin-top: 100px; /* Adjust the margin-top as needed */
     margin-bottom: 50px;
     text-transform: capitalize;
     letter-spacing: 2px;
@@ -781,8 +789,41 @@ video {
     margin-left: 40px;
     font-weight: 700;
 }
+iframe {
+    display: block;
+    margin: 0 auto;
+ }
 
+.caption-center{
+    text-align: center;
+    /* margin-top: 50px; Adjust the margin-top as needed */
+    /* margin-bottom: 50px; */
+    font-family: 'Lato', sans-serif;
+    /* text-transform: capitalize; */
+    font-size: 15px;
+    letter-spacing: 2px;
+    position: relative;
+    color: #a3b18a;
+    margin-left: 40px;
+    font-weight: 700;
+}
 
+.backToTop{
+    text-align: center;
+    margin-top: 25px; /* Adjust the margin-top as needed */
+    margin-bottom: 25px;
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    font-size: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    color: #218380;
+    margin-left: 40px;
+    font-weight: 700;
+}
+.backToTop:hover{
+    color: #a3b18a;
+}
 /* contact
 ==================================================*/
 
