@@ -31,19 +31,28 @@
     rail.append(make('span', 'dossier-micro', 'COLLECTED / NOTES'), make('h3', '', 'Field notes'));
     const images = [...dialog.querySelectorAll('img')].filter(img => img.getAttribute('src'));
     const selected = make('img', 'dossier-image');
-    selected.src = image?.src || images[0]?.src || '';
-    selected.alt = `${title} — selected artwork`;
-    const choices = [image, ...images].filter(Boolean).filter((img, index, all) => all.findIndex(other => other.src === img.src) === index).slice(0, 3);
+    const curatedMedia = {
+      'modal-01': [
+        {src: 'img/work/DreamChaser/M7Wsp0.png', label: 'LEVEL DESIGN / 01'},
+        {src: 'img/work/DreamChaser/story.gif', label: 'STORY SEQUENCE / GIF'},
+        {src: 'img/work/DreamChaser/bnahkM.png', label: 'LEVEL DESIGN / 03'}
+      ]
+    };
+    const choices = curatedMedia[id] || [image, ...images].filter(Boolean)
+      .filter((img, index, all) => all.findIndex(other => other.src === img.src) === index)
+      .slice(0, 3).map((img, index) => ({src: img.src, label: `FRAGMENT / 0${index + 1}`}));
+    selected.src = choices[0]?.src || '';
+    selected.alt = `${title} — ${choices[0]?.label || 'selected artwork'}`;
     choices.forEach((source, index) => {
       const thumb = make('button', 'dossier-thumbnail');
       thumb.type = 'button';
-      thumb.setAttribute('aria-label', `View ${title} image ${index + 1}`);
+      thumb.setAttribute('aria-label', `View ${title}: ${source.label}`);
       thumb.setAttribute('aria-pressed', String(index === 0));
       const photo = make('img', ''); photo.src = source.src; photo.alt = ''; photo.loading = 'lazy';
-      thumb.append(photo, make('span', '', `FRAGMENT / 0${index + 1}`));
+      thumb.append(photo, make('span', '', source.label));
       thumb.addEventListener('click', () => {
         selected.src = source.src;
-        selected.alt = `${title} — artwork ${index + 1}`;
+        selected.alt = `${title} — ${source.label}`;
         rail.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button === thumb)));
       });
       rail.append(thumb);
