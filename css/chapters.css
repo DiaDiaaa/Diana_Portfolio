@@ -923,3 +923,78 @@ h4:before {
 #portfolio2023 object {
   max-width: 100%;
 }
+/* Project chapters: a layered archival notebook spread. */
+.chapter-dialog {
+  width: min(1420px, 96vw);
+  max-height: 94vh;
+  padding: 32px;
+  border: 0;
+  border-radius: 0;
+  background-color: #f5f4f0;
+  background-image: radial-gradient(#cacbca 1px, transparent 1px);
+  background-size: 13px 13px;
+  color: #343736;
+  overscroll-behavior: contain;
+}
+.chapter-dialog::backdrop { background: #202323ce; backdrop-filter: blur(7px); }
+.dialog-close { top: 0; margin-bottom: 18px; background: #303534; color: #fff; border: 1px solid #fff; font: 11px/1.5 monospace; letter-spacing: .08em; box-shadow: 4px 4px 0 #aab7bc; }
+.dossier-spread { position: relative; display: grid; grid-template-columns: 15% 39% 46%; border: 10px solid #343736; background: #fff; padding: 18px; min-height: 650px; isolation: isolate; }
+.dossier-spread::before { content: ''; position: absolute; inset: 18px; border: 1px solid #d1d2cf; pointer-events: none; z-index: -1; }
+.dossier-rail { padding: 18px 12px; border-right: 1px solid #d1d2cf; position: relative; }
+.dossier-rail::before { content: '━\A━\A━'; white-space: pre; position: absolute; left: -42px; top: 44px; font: bold 40px/.7 Arial; color: #343736; text-shadow: 0 2px #fff; }
+.dossier-micro,.dossier-running { font: 9px/1.7 'Courier New', monospace; letter-spacing: .08em; color: #737d80; }
+.dossier-rail h3 { font: bold 22px/1.2 Georgia; margin: 24px 0; }
+.dossier-thumbnail { display: block; width: 100%; padding: 5px; margin: 22px 0; border: 1px solid #a8aaa5; background: #fff; transform: rotate(-8deg); transition: transform .2s; }
+.dossier-thumbnail:nth-of-type(2) { transform: rotate(8deg); }
+.dossier-thumbnail img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.dossier-thumbnail span { font: 7px/1.6 monospace; display: block; margin-top: 5px; }
+.dossier-thumbnail:hover,.dossier-thumbnail[aria-pressed=true] { transform: rotate(-3deg) translateY(-3px); box-shadow: 3px 4px 0 #d7e0e1; }
+.dossier-scribble { white-space: pre-line; font: italic 13px/1.5 Georgia; color: #85695c; margin-top: 30px; }
+.dossier-mark { font-size: 40px; color: #929b9b; }
+.dossier-notes { padding: 0 24px 25px; min-width: 0; }
+.dossier-running { border-bottom: 1px solid #d1d2cf; padding: 15px 0; }
+.dossier-title { font: bold 29px/1.15 Georgia; letter-spacing: -1px; margin: 24px 0 20px; color: #576e77; overflow-wrap: anywhere; }
+.dossier-note-box { position: relative; border: 1px dashed #929996; border-radius: 13px; padding: 16px 19px; margin: 16px 0; background: #fafaf8; overflow: hidden; }
+.dossier-note-box h3 { position: relative; font: bold 20px/1.25 Georgia; margin: 8px 0; }
+.dossier-note-box p { position: relative; font-size: 11px; margin: 8px 0 0; }
+.dossier-watermark { position: absolute; right: 6px; bottom: -22px; font: bold 110px/1 Arial; color: #e9eae6; pointer-events: none; }
+.dossier-summary p { font: 13px/1.75 Georgia; }
+.dossier-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 21px 0; }
+.dossier-action { background: #353a38; color: #fff; border-radius: 20px 20px 0 20px; padding: 8px 18px; font: 12px Georgia; }
+.dossier-action:hover { background: #536a73; color: white; }
+.dossier-read { font: 11px monospace; border-bottom: 1px solid #899794; }
+.dossier-title-card { position: relative; margin: 34px -35px 0 -65px; padding: 24px; border: 1px solid #8e9390; outline: 6px solid white; background: #fff; box-shadow: 8px 8px 0 #d9dfdd; z-index: 2; }
+.dossier-title-card::before { content: ''; position: absolute; inset: 9px; border: 1px dashed #949995; pointer-events: none; }
+.dossier-title-card h3 { font: bold 34px/1.1 Georgia; white-space: pre-line; letter-spacing: -1px; margin: 15px 0; }
+.dossier-title-card p { font: 10px/1.5 monospace; margin-bottom: 0; }
+.dossier-artwork { position: sticky; align-self: start; top: 60px; margin: 0 -12px 0 14px; padding: 14px 14px 8px; border: 1px solid #888e8a; background: #fff; transform: rotate(-4deg); box-shadow: 8px 9px 0 #f7f7f4, 9px 10px 0 #898f8b, 15px 16px 0 #e1e3df; }
+.dossier-artwork::before { content: ''; position: absolute; left: 34%; top: -13px; height: 26px; width: 100px; background: #bcc9c8a8; transform: rotate(5deg); }
+.dossier-image { display: block; width: 100%; height: 590px; object-fit: contain; background: #e9edeb; border: 1px solid #b2bab6; }
+.dossier-artwork figcaption { padding: 12px 0 4px; font: italic 12px Georgia; text-align: center; color: #63716d; }
+.chapter-dialog .modal-content { margin-top: 42px; background: #fff; padding: 25px; border: 1px solid #bdc5be; border-radius: 0; }
+.dossier-details-heading { border-bottom: 1px dashed #919c95; padding-bottom: 18px; font: 11px monospace; letter-spacing: .12em; color: #65776e; }
+@media(max-width:1000px) {
+  .chapter-dialog { padding: 20px; }
+  .dossier-spread { grid-template-columns: 17% 43% 40%; padding: 12px; border-width: 7px; }
+  .dossier-notes { padding: 0 16px 20px; }
+  .dossier-title { font-size: 25px; }
+  .dossier-title-card h3 { font-size: 27px; }
+  .dossier-image { height: 470px; }
+}
+@media(max-width:700px) {
+  .chapter-dialog { width: 96vw; padding: 14px; }
+  .dossier-spread { grid-template-columns: 1fr; padding: 14px; border-width: 5px; }
+  .dossier-rail { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 8px 0 18px; border-right: 0; border-bottom: 1px solid #d1d2cf; }
+  .dossier-rail>.dossier-micro { width: 100%; }
+  .dossier-rail h3 { font-size: 20px; margin: 0; width: 100%; }
+  .dossier-rail::before,.dossier-scribble,.dossier-mark { display: none; }
+  .dossier-thumbnail { width: 64px; margin: 5px 2px; }
+  .dossier-thumbnail span { font-size: 5px; }
+  .dossier-notes { padding: 0; }
+  .dossier-title { font-size: 29px; }
+  .dossier-title-card { margin: 28px 0; padding: 23px; }
+  .dossier-title-card h3 { font-size: 31px; }
+  .dossier-artwork { position: relative; top: auto; margin: 6px 3px 15px; transform: rotate(-2deg); }
+  .dossier-image { height: 320px; }
+  .chapter-dialog .modal-content { padding: 15px; }
+}
