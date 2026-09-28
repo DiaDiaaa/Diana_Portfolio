@@ -1,0 +1,73 @@
+[
+  {
+    "id": "light-and-windows",
+    "kind": "photography",
+    "title": "光落下的地方",
+    "subtitle": "LIGHT & SHADOW",
+    "note": "窗边的暖光，和天色暗下来前的一小片天空。",
+    "images": [
+      {
+        "src": "img/IMG_3695.JPG",
+        "alt": "日光穿过窗户，在浅色墙面留下影子"
+      },
+      {
+        "src": "img/IMG_3698.JPG",
+        "alt": "从深色建筑之间望见日落天空"
+      },
+      {
+        "src": "img/IMG_3702.jpg",
+        "alt": "水面反射的光与前景栏杆"
+      }
+    ]
+  },
+  {
+    "id": "a-blue-afternoon",
+    "kind": "plog",
+    "title": "收集一片蓝",
+    "subtitle": "AN EVERYDAY COLLECTION",
+    "note": "抬头看天，沿着小路走走。把沿途的蓝色和绿色放在一起。",
+    "images": [
+      {
+        "src": "img/IMG_5039.JPEG",
+        "alt": "蓝天下延伸的电线与电线杆"
+      },
+      {
+        "src": "img/IMG_3692.JPG",
+        "alt": "树木之间延伸的木质步道"
+      },
+      {
+        "src": "img/IMG_7405.JPG",
+        "alt": "草地、树木与远处的建筑"
+      },
+      {
+        "src": "img/IMG_7406.JPG",
+        "alt": "庭院里的白色廊柱与浅色建筑"
+      }
+    ]
+  },
+  {
+    "id": "small-things",
+    "kind": "photography",
+    "title": "微小，也闪闪发亮",
+    "subtitle": "A CLOSER LOOK",
+    "note": "叶片、玻璃和折射的光。换一个距离，看见不一样的细节。",
+    "images": [
+      {
+        "src": "img/IMG_6678.JPEG",
+        "alt": "透明玻璃装饰折射出蓝紫色的光"
+      },
+      {
+        "src": "img/IMG_6956.JPEG",
+        "alt": "阳光照亮深色背景前的绿色叶片"
+      },
+      {
+        "src": "img/IMG_6717.JPEG",
+        "alt": "金属饰物上的蓝色珠子与浅景深光斑"
+      },
+      {
+        "src": "img/IMG_6983.JPEG",
+        "alt": "暗处灯光映出的星状光芒"
+      }
+    ]
+  }
+]
