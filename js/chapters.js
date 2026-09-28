@@ -1,5 +1,17 @@
 /* Native dialogs keep project stories keyboard accessible without plugin dependencies. */
 (() => {
+  // Decorative only: the fixed clock face is an illustration, not a time display.
+  document.querySelectorAll('.experience-intro, .journal-intro').forEach(section => {
+    const ornament = document.createElement('div');
+    ornament.className = 'lunar-ornament';
+    ornament.setAttribute('aria-hidden', 'true');
+    const image = document.createElement('img');
+    image.src = 'img/decor/lunar-compass.svg'; image.alt = '';
+    ornament.append(image);
+    const caption = document.createElement('span');
+    caption.textContent = 'LUNAR ARCHIVE / 小小宇宙'; ornament.append(caption);
+    section.append(ornament);
+  });
   const cards = [...document.querySelectorAll('.portfolio_item')];
   cards.forEach((card, i) => {
     const title = card.querySelector('.item_info span')?.textContent.trim() || 'Project';

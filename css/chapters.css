@@ -1021,3 +1021,33 @@ h4:before {
  #experience .timeline { margin-left: 8px; }
  #experience h4 { font-size: 13px; line-height: 1.5; }
 }
+/* A luminous celestial layer, in the existing ice-blue and lavender palette. */
+body { background-image: radial-gradient(ellipse at 95% 6%, #eae8f466, transparent 36%); }
+.lunar-ornament { pointer-events: none; user-select: none; }
+.lunar-ornament img { display: block; width: 100%; }
+.lunar-ornament>span { display: block; text-align: center; font: 9px/1.8 Georgia,serif; letter-spacing: .24em; color: #8d9db9; margin-top: -12px; }
+.experience-intro { position: relative; max-width: none; min-height: 310px; padding-right: 350px; display: flow-root; }
+.experience-intro .lunar-ornament { position: absolute; width: 350px; right: -10px; top: -35px; }
+.experience-intro h1 { font-size: 53px; }
+.memory-collage::before { content: ''; position: absolute; inset: -75px -60px; background: url('../img/decor/lunar-compass.svg') center/contain no-repeat; opacity: .6; pointer-events: none; }
+.memory-collage .orbit { opacity: .35; }
+.chapter-ribbon { position: relative; background: linear-gradient(100deg,#eaf1f8,#f3f0f8,#eaf1f8); }
+.chapter-ribbon b { color: #8e9cbc; }
+.timeline-event-icon { border-radius: 50%; background: #a9b6cf; box-shadow: 0 0 0 5px var(--paper),0 0 0 6px #c5cde0; }
+.timeline-event:nth-child(even) .timeline-event-icon { background: var(--paper); border: 1px solid #a6b3cd; box-shadow: inset 5px -2px 0 #a9b6cf,0 0 0 5px var(--paper),0 0 0 6px #c5cde0; }
+.chapter-footer { position: relative; isolation: isolate; overflow: hidden; }
+.chapter-footer::before { content: ''; position: absolute; z-index: -1; width: 370px; height: 370px; left: -125px; top: 20px; background: url('../img/decor/lunar-compass.svg') center/contain no-repeat; opacity: .4; pointer-events: none; }
+.chapter-footer::after { content: '✧ · ☾ · ✧'; display: block; position: absolute; right: 7%; top: 38px; color: #9eabc5; letter-spacing: 10px; font: 22px Georgia; pointer-events: none; }
+.dossier-title-card::after { content: '☾'; position: absolute; right: 20px; bottom: 18px; color: #a4b1ca; font: 40px Georgia; opacity: .55; pointer-events: none; }
+@media(max-width:1000px) {
+ .experience-intro { padding-right: 260px; min-height: 280px; }
+ .experience-intro .lunar-ornament { width: 270px; right: -20px; top: 0; }
+ .experience-intro h1 { font-size: 44px; }
+}
+@media(max-width:600px) {
+ .experience-intro { padding: 0 15px; }
+ .experience-intro h1 { font-size: 40px; }
+ .experience-intro .lunar-ornament { position: relative; width: min(290px,100%); right: auto; top: auto; margin: 24px auto 0; }
+ .memory-collage::before { inset: -35px -25px; }
+ .chapter-footer::after { top: 18px; right: 15px; font-size: 16px; }
+}

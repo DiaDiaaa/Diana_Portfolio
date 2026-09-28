@@ -15,3 +15,10 @@
 .photo-viewer{width:min(1200px,96vw);max-height:94vh;border:1px solid var(--line);background:#f8f9f6;color:var(--ink);padding:18px}.photo-viewer:not([open]){display:none}.photo-viewer::backdrop{background:#182434da}.photo-close{display:block;margin:0 0 16px auto;padding:8px 15px;background:#e7edf6;border:1px solid #aeb9ce}.photo-stage{display:grid;grid-template-columns:40px minmax(0,1fr) 40px;align-items:center;gap:12px}.photo-stage>button{border:1px solid #aab8ce;background:#fff;width:40px;height:44px;font-size:22px}.photo-stage img{display:block;margin:auto;max-width:100%;max-height:72vh;object-fit:contain}#viewer-caption{text-align:center;font-size:12px;margin:18px 0 0}.chapter-header nav{gap:24px}
 @media(max-width:900px){.journal-grid{gap:18px}.journal-card-image img{height:260px}.journal-intro h1{font-size:52px}.journal-stamp{padding:28px}.chapter-header nav{gap:16px}}
 @media(max-width:600px){.journal-main{padding:40px 24px 65px}.journal-intro{align-items:flex-start;position:relative;margin-bottom:30px}.journal-intro h1{font-size:44px;letter-spacing:-1px}.journal-intro .eyebrow{font-size:8px}.journal-stamp{display:none}.journal-toolbar{gap:12px;flex-wrap:wrap}.journal-toolbar button{padding:7px 12px}.journal-grid,.entry-gallery{grid-template-columns:1fr}.journal-card:nth-child(2){margin-top:0}.journal-card-image img{height:360px}.journal-card-copy>p:not(.eyebrow){min-height:0}.entry-gallery{gap:22px}#entry-title{font-size:35px}.photo-viewer{padding:10px}.photo-stage{grid-template-columns:30px minmax(0,1fr) 30px;gap:5px}.photo-stage>button{width:30px;height:40px}.photo-stage img{max-height:67vh}.chapter-header nav{gap:7px}.chapter-header nav a{font-size:10px}}
+.journal-intro .journal-stamp { display: none; }
+.journal-intro .lunar-ornament { width: 340px; flex-shrink: 0; margin-right: -10px; }
+@media(max-width:900px) { .journal-intro .lunar-ornament { width: 260px; } }
+@media(max-width:600px) {
+ .journal-intro { flex-direction: column; }
+ .journal-intro .lunar-ornament { width: 230px; align-self: center; margin: -5px 0 10px; }
+}
