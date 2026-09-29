@@ -36,6 +36,12 @@
       return node;
     };
     const number = String(i + 1).padStart(2, '0');
+    const ticketMeta = make('div', 'ticket-meta');
+    ticketMeta.append(make('span', 'ticket-admit', `ADMIT ONE / ${number}`), make('span', 'ticket-invitation', 'A little world awaits'), make('span', 'ticket-barcode'));
+    ticketMeta.lastChild.setAttribute('aria-hidden', 'true');
+    card.querySelector('.item_info').append(ticketMeta);
+    card.setAttribute('aria-haspopup', 'dialog');
+
     const details = dialog.querySelector('.modal-content');
     if (details) details.id = `${id}-details`;
     const spread = make('section', 'dossier-spread');
@@ -98,7 +104,45 @@
     const close = document.createElement('button');
     close.type = 'button'; close.className = 'dialog-close'; close.textContent = 'Close chapter ×';
     close.addEventListener('click', () => dialog.close()); dialog.prepend(close);
-    card.addEventListener('click', e => { e.preventDefault(); dialog.showModal(); document.body.classList.add('dialog-open'); });
+    const scene = make('div', 'ticket-scene');
+    scene.setAttribute('aria-hidden', 'true');
+    const boarding = make('div', 'boarding-ticket');
+    const mainPass = make('div', 'boarding-main');
+    mainPass.append(make('p', 'boarding-brand', 'diana / creative journeys'), make('span', 'boarding-label', 'A PASS INTO ANOTHER WORLD'), make('h2', '', title));
+    const route = make('div', 'boarding-route');
+    route.append(make('span', '', 'IDEA'), make('span', '', '→'), make('span', '', 'WORLD'));
+    mainPass.append(route, make('p', 'boarding-label', `${category.toUpperCase()} · CHAPTER ${number} · DIANA YEE`));
+    const stub = make('div', 'boarding-stub');
+    stub.append(make('span', 'boarding-label', 'KEEP THIS LITTLE MEMORY'), make('strong', '', number), make('p', '', title), make('span', 'ticket-barcode'));
+    boarding.append(mainPass, stub);
+    const delivery = make('div', 'postcard-delivery');
+    const postcard = make('div', 'delivered-postcard');
+    const postcardImage = make('img', ''); postcardImage.src = image.src; postcardImage.alt = '';
+    postcard.append(postcardImage, make('span', '', `A postcard from ${title}`));
+    const hand = make('img', 'delivery-hand'); hand.src = 'img/decor/postcard-hand.svg'; hand.alt = '';
+    delivery.append(hand, postcard); scene.append(boarding, delivery);
+    const skip = make('button', 'skip-ticket', 'Skip animation →'); skip.type = 'button';
+    dialog.prepend(scene, skip);
+    let revealTimer;
+    const reveal = () => {
+      clearTimeout(revealTimer);
+      dialog.classList.remove('ticket-entering');
+      scene.hidden = true; skip.hidden = true;
+      spread.inert = false; if (details) details.inert = false;
+      close.focus({preventScroll: true});
+    };
+    skip.addEventListener('click', reveal);
+    card.addEventListener('click', e => {
+      e.preventDefault();
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      scene.hidden = reduced; skip.hidden = reduced;
+      spread.inert = !reduced; if (details) details.inert = !reduced;
+      dialog.classList.toggle('ticket-entering', !reduced);
+      dialog.showModal(); dialog.scrollTop = 0;
+      document.body.classList.add('dialog-open');
+      if (!reduced) { skip.focus({preventScroll: true}); revealTimer = setTimeout(reveal, 2900); }
+    });
+    dialog.addEventListener('close', () => { clearTimeout(revealTimer); dialog.classList.remove('ticket-entering'); spread.inert = false; if (details) details.inert = false; });
     dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); dialog.querySelectorAll('video,audio').forEach(media => media.pause()); });
   });
   const count = document.getElementById('project-count');
