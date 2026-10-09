@@ -119,34 +119,38 @@
     const postcard = make('div', 'delivered-postcard');
     const postcardImage = make('img', ''); postcardImage.src = image.src; postcardImage.alt = '';
     postcard.append(postcardImage, make('span', '', `A postcard from ${title}`));
-    const hand = make('img', 'delivery-hand'); hand.src = 'img/decor/postcard-hand.svg'; hand.alt = '';
-    delivery.append(hand, postcard); scene.append(boarding, delivery);
-    const skip = make('button', 'skip-ticket', 'Skip animation →'); skip.type = 'button';
-    dialog.prepend(scene, skip);
-    let revealTimer;
+    const cabinet = make('div', 'file-cabinet');
+    cabinet.append(make('span', 'cabinet-label', 'DIANA’S ARCHIVE / SELECTED WORK'), make('div', 'cabinet-slot'), make('div', 'cabinet-drawer'));
+    delivery.append(postcard); scene.append(boarding, cabinet, delivery);
+    const stage = make('section', 'project-opening'); stage.hidden = true;
+    stage.setAttribute('aria-label', `Opening ${title}`);
+    const skip = make('button', 'skip-ticket', 'Open chapter →'); skip.type = 'button';
+    const cancel = make('button', 'cancel-ticket', 'Back to tickets ×'); cancel.type = 'button';
+    stage.append(scene, skip, cancel);
+    card.parentElement.after(stage);
+    const resetOpening = () => {
+      stage.hidden = true; stage.classList.remove('ticket-entering');
+    };
+    document.addEventListener('chapter-opening', resetOpening);
     const reveal = () => {
-      clearTimeout(revealTimer);
-      dialog.classList.remove('ticket-entering');
-      scene.hidden = true; skip.hidden = true;
-      spread.inert = false; if (details) details.inert = false;
-      close.focus({preventScroll: true});
+      resetOpening(); dialog.showModal(); dialog.scrollTop = 0;
+      document.body.classList.add('dialog-open'); close.focus({preventScroll: true});
     };
     skip.addEventListener('click', reveal);
+    cancel.addEventListener('click', () => { resetOpening(); card.focus({preventScroll: true}); });
+    stage.addEventListener('keydown', e => { if (e.key === 'Escape') { resetOpening(); card.focus(); } });
     card.addEventListener('click', e => {
-      e.preventDefault();
-      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      scene.hidden = reduced; skip.hidden = reduced;
-      spread.inert = !reduced; if (details) details.inert = !reduced;
-      dialog.classList.toggle('ticket-entering', !reduced);
-      dialog.showModal(); dialog.scrollTop = 0;
-      document.body.classList.add('dialog-open');
-      if (!reduced) { skip.focus({preventScroll: true}); revealTimer = setTimeout(reveal, 2900); }
+      e.preventDefault(); document.dispatchEvent(new Event('chapter-opening'));
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) { reveal(); return; }
+      stage.hidden = false; stage.classList.add('ticket-entering');
+      stage.scrollIntoView({behavior: 'smooth', block: 'center'});
+      skip.focus({preventScroll: true});
     });
-    dialog.addEventListener('close', () => { clearTimeout(revealTimer); dialog.classList.remove('ticket-entering'); spread.inert = false; if (details) details.inert = false; });
     dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); dialog.querySelectorAll('video,audio').forEach(media => media.pause()); });
   });
   const count = document.getElementById('project-count');
   const filter = value => {
+    document.dispatchEvent(new Event('chapter-opening'));
     let visible = 0;
     cards.forEach(card => {
       const category = card.dataset.category;

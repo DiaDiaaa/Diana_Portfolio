@@ -1103,3 +1103,24 @@ body { background-image: radial-gradient(ellipse at 95% 6%, #eae8f466, transpare
  .chapter-dialog { padding: 18px 14px; }.boarding-ticket { width: 88vw; grid-template-columns: 1fr 85px; }.boarding-main,.boarding-stub { padding: 14px; }.boarding-brand { font-size: 17px; }.boarding-main h2 { font-size: 25px; }.boarding-route { font-size: 20px; padding: 15px 0; }.boarding-label { font-size: 7px; }.boarding-stub strong { font-size: 38px; }.boarding-stub p { font-size: 13px; overflow-wrap: anywhere; }.ticket-entering>.dialog-close { left: 14px; top: 16px; font-size: 9px; }.skip-ticket { right: 14px; top: 16px; font-size: 9px; padding: 10px; }.delivered-postcard { padding: 10px 10px 30px; }.delivered-postcard>span { font-size: 11px; }.delivery-hand { bottom: -60%; }
 }
 @media(prefers-reduced-motion:reduce) { .ticket-scene,.skip-ticket { display: none!important; }.ticket-entering>.dossier-spread,.ticket-entering>.modal-content { visibility: visible; } }
+
+/* Open each chapter in the project collection, before entering its details. */
+.project-opening { position: relative; grid-column: 1 / -1; width: 100%; height: 530px; margin: 4px 0 18px; border: 1px solid #c5cedd; border-radius: 12px; overflow: hidden; background: #edf1f7; }
+.project-opening[hidden] { display: none; }
+.project-opening .ticket-scene { position: absolute; }
+.project-opening .skip-ticket,.cancel-ticket { position: absolute; top: 18px; z-index: 20; padding: 11px 14px; border: 1px solid #a4b1ca; background: #fafbf8; color: #4e6080; font: 11px monospace; }
+.project-opening .skip-ticket { right: 18px; }.cancel-ticket { left: 18px; }
+.project-opening .boarding-ticket { width: 84%; grid-template-columns: 1fr 145px; }
+.project-opening .boarding-main h2 { font-size: 28px; }.project-opening .boarding-route { font-size: 24px; padding: 12px 0; margin: 12px 0; }
+.file-cabinet { position: absolute; width: 65%; height: 225px; bottom: 25px; border: 1px solid #97a9c2; border-radius: 8px; background: linear-gradient(120deg,#dce4ee,#b9c9da); box-shadow: 0 14px 25px #586a8626; opacity: 0; }
+.cabinet-label { display: block; padding: 19px; color: #536782; font: 10px monospace; letter-spacing: .12em; }
+.cabinet-slot { position: absolute; top: 60px; left: 5%; width: 90%; height: 19px; border-radius: 5px; background: #6e809c; box-shadow: inset 0 5px 8px #35435955; }
+.cabinet-drawer { position: absolute; inset: 100px 5% 18px; border: 1px solid #97aac1; border-radius: 4px; background: #d4deeb; }
+.cabinet-drawer::after { content: 'CHAPTERS  /  01—11'; display: block; margin: 22px auto; width: 160px; padding: 10px; border: 3px solid #a1b1c7; background: #f4f4ee; text-align: center; color: #667a94; font: 9px monospace; }
+.project-opening .postcard-delivery { width: 48%; height: 280px; z-index: 3; }
+.project-opening.ticket-entering .boarding-ticket { animation: ticket-away 3.35s ease both; }
+.project-opening.ticket-entering .file-cabinet { animation: cabinet-arrive 3.35s ease both; }
+.project-opening.ticket-entering .postcard-delivery { animation: drawer-postcard 3.35s ease both; }
+@keyframes cabinet-arrive { 0%,28% { opacity: 0; transform: translateY(50px); } 42%,100% { opacity: 1; transform: none; } }
+@keyframes drawer-postcard { 0%,42% { opacity: 0; transform: translateY(125px) scale(.72); clip-path: inset(100% 0 0); } 48% { opacity: 1; transform: translateY(110px) scale(.72); clip-path: inset(80% 0 0); } 75%,100% { opacity: 1; transform: translateY(-40px) rotate(-4deg); clip-path: inset(0); } }
+@media(max-width:600px) { .project-opening { height: 470px; }.project-opening .boarding-ticket { width: 87%; grid-template-columns: 1fr 70px; }.project-opening .boarding-main h2 { font-size: 20px; overflow-wrap: anywhere; }.project-opening .boarding-route { font-size: 16px; }.file-cabinet { width: 88%; }.project-opening .postcard-delivery { width: 72%; height: 200px; }.project-opening .skip-ticket,.cancel-ticket { font-size: 9px; padding: 9px; } }
