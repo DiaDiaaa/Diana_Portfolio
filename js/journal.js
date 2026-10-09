@@ -1,4 +1,3 @@
-import { commentsConfig } from './journal-config.js';
 const $ = selector => document.querySelector(selector);
 const make = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -24,30 +23,6 @@ viewer.addEventListener('keydown', event => {
   }
 });
 viewer.addEventListener('close', () => document.body.classList.remove('dialog-open'));
-async function loadComments(post) {
-  if (!commentsConfig.serverURL) return;
-  const status = $('#comment-status');
-  status.textContent = '正在加载留言…';
-  try {
-    const url = new URL(commentsConfig.serverURL);
-    if (url.protocol !== 'https:') throw new Error('HTTPS required');
-    const base = `https://unpkg.com/@waline/client@${commentsConfig.clientVersion}/dist/`;
-    const css = make('link', ''); css.rel = 'stylesheet'; css.href = `${base}waline.css`; document.head.append(css);
-    const { init } = await import(`${base}waline.js`);
-    init({
-      el: '#journal-comments', serverURL: url.href,
-      // Stable across query strings, deploy aliases, and local previews.
-      path: `/journal/${post.id}`, lang: 'zh-CN',
-      login: 'disable', meta: ['nick'], requiredMeta: ['nick'],
-      wordLimit: [1, 1000], pageSize: 10,
-      imageUploader: false, search: false, emoji: false,
-      reaction: false, pageview: false,
-    });
-    status.textContent = '昵称与留言会公开显示。请勿填写私人联系方式。';
-  } catch {
-    status.textContent = '留言暂时无法加载，请稍后刷新重试。';
-  }
-}
 try {
   const response = await fetch('data/journal.json');
   if (!response.ok) throw new Error('Journal unavailable');
@@ -75,7 +50,6 @@ try {
         figure.append(button, make('figcaption', '', `${String(index + 1).padStart(2, '0')} / ${photo.alt}`));
         $('#entry-gallery').append(figure);
       });
-      loadComments(post);
     }
   }
   posts.forEach(post => {
@@ -86,8 +60,7 @@ try {
     const text = make('div', 'journal-card-copy');
     text.append(make('p', 'eyebrow', post.kind === 'plog' ? 'DAILY PLOG / 日常' : 'PHOTOGRAPHY / 摄影'));
     const heading = make('h2', ''); const titleLink = make('a', '', post.title); titleLink.href = link.href; heading.append(titleLink);
-    const note = make('a', 'journal-note-link', '看照片 · 留句话 ↗'); note.href = `${link.href}#comments-title`;
-    text.append(heading, make('p', '', post.note), note); card.append(link, text); $('#journal-grid').append(card);
+    text.append(heading, make('p', '', post.note)); card.append(link, text); $('#journal-grid').append(card);
   });
   const filter = kind => {
     let count = 0;
@@ -99,7 +72,6 @@ try {
     filter(button.dataset.kind);
   }));
   filter('all');
-  if (location.hash === '#comments-title' && !$('#journal-entry').hidden) $('#comments-title').scrollIntoView();
 } catch {
   $('#journal-error').hidden = false;
 }
