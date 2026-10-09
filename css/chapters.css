@@ -1133,3 +1133,9 @@ body { background-image: radial-gradient(ellipse at 95% 6%, #ccdcff66, transpare
 @media(max-width:600px) { .experience-lunar-page .lunar-background { width: 125vw; height: 125vw; right: -48vw; top: 20vh; opacity: .16; } }
 .experience-lunar-page #experience { background: transparent; position: relative; z-index: 1; }
 .experience-lunar-page .lunar-background { z-index: 0; }
+/* Let the postcard settle into its chapter instead of cutting abruptly. */
+.chapter-dialog[open] { animation: chapter-reveal .4s cubic-bezier(.22,.61,.36,1) both; }
+.chapter-dialog[open]::backdrop { animation: chapter-backdrop .4s ease-out both; }
+@keyframes chapter-reveal { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes chapter-backdrop { from { opacity: 0; } to { opacity: 1; } }
+@media(prefers-reduced-motion:reduce) { .chapter-dialog[open], .chapter-dialog[open]::backdrop { animation: none; } }
