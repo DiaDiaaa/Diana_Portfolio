@@ -161,7 +161,7 @@
       stage.hidden = false; stage.classList.add('ticket-entering');
       stage.scrollIntoView({behavior: 'smooth', block: 'center'});
       cancel.focus({preventScroll: true});
-      revealTimer = setTimeout(reveal, 3400);
+      revealTimer = setTimeout(reveal, 1600);
     });
     dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); dialog.querySelectorAll('video,audio').forEach(media => media.pause()); });
   });
