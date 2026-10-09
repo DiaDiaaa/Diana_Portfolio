@@ -124,11 +124,12 @@
     delivery.append(postcard); scene.append(boarding, cabinet, delivery);
     const stage = make('section', 'project-opening'); stage.hidden = true;
     stage.setAttribute('aria-label', `Opening ${title}`);
-    const skip = make('button', 'skip-ticket', 'Open chapter →'); skip.type = 'button';
     const cancel = make('button', 'cancel-ticket', 'Back to tickets ×'); cancel.type = 'button';
-    stage.append(scene, skip, cancel);
+    stage.append(scene, cancel);
     card.parentElement.after(stage);
+    let revealTimer;
     const resetOpening = () => {
+      clearTimeout(revealTimer);
       stage.hidden = true; stage.classList.remove('ticket-entering');
     };
     document.addEventListener('chapter-opening', resetOpening);
@@ -136,7 +137,6 @@
       resetOpening(); dialog.showModal(); dialog.scrollTop = 0;
       document.body.classList.add('dialog-open'); close.focus({preventScroll: true});
     };
-    skip.addEventListener('click', reveal);
     cancel.addEventListener('click', () => { resetOpening(); card.focus({preventScroll: true}); });
     stage.addEventListener('keydown', e => { if (e.key === 'Escape') { resetOpening(); card.focus(); } });
     card.addEventListener('click', e => {
@@ -144,7 +144,8 @@
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) { reveal(); return; }
       stage.hidden = false; stage.classList.add('ticket-entering');
       stage.scrollIntoView({behavior: 'smooth', block: 'center'});
-      skip.focus({preventScroll: true});
+      cancel.focus({preventScroll: true});
+      revealTimer = setTimeout(reveal, 3400);
     });
     dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); dialog.querySelectorAll('video,audio').forEach(media => media.pause()); });
   });
