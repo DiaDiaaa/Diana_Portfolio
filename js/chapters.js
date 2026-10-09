@@ -10,7 +10,23 @@
     ornament.append(image);
     const caption = document.createElement('span');
     caption.textContent = 'LUNAR ARCHIVE / 小小宇宙'; ornament.append(caption);
-    section.append(ornament);
+    if (section.matches('.experience-intro')) {
+      document.body.classList.add('experience-lunar-page');
+      ornament.classList.add('lunar-background');
+      caption.remove();
+      document.body.prepend(ornament);
+      const motion = matchMedia('(prefers-reduced-motion: reduce)');
+      let queued = false;
+      const rotate = () => {
+        image.style.transform = `rotate(${motion.matches ? 0 : window.scrollY * 0.045}deg)`;
+        queued = false;
+      };
+      window.addEventListener('scroll', () => {
+        if (!queued) { queued = true; requestAnimationFrame(rotate); }
+      }, {passive: true});
+      motion.addEventListener('change', rotate);
+      rotate();
+    } else section.append(ornament);
   });
   const cards = [...document.querySelectorAll('.portfolio_item')];
   cards.forEach((card, i) => {

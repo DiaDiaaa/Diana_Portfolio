@@ -1124,3 +1124,12 @@ body { background-image: radial-gradient(ellipse at 95% 6%, #eae8f466, transpare
 @keyframes cabinet-arrive { 0%,28% { opacity: 0; transform: translateY(50px); } 42%,100% { opacity: 1; transform: none; } }
 @keyframes drawer-postcard { 0%,42% { opacity: 0; transform: translateY(125px) scale(.72); clip-path: inset(100% 0 0); } 48% { opacity: 1; transform: translateY(110px) scale(.72); clip-path: inset(80% 0 0); } 75%,100% { opacity: 1; transform: translateY(-40px) rotate(-4deg); clip-path: inset(0); } }
 @media(max-width:600px) { .project-opening { height: 470px; }.project-opening .boarding-ticket { width: 87%; grid-template-columns: 1fr 70px; }.project-opening .boarding-main h2 { font-size: 20px; overflow-wrap: anywhere; }.project-opening .boarding-route { font-size: 16px; }.file-cabinet { width: 88%; }.project-opening .postcard-delivery { width: 72%; height: 200px; }.project-opening .skip-ticket,.cancel-ticket { font-size: 9px; padding: 9px; } }
+
+/* A quiet lunar backdrop follows the experience journey. */
+.experience-lunar-page { isolation: isolate; }
+.experience-lunar-page .lunar-background { position: fixed; z-index: -1; width: min(82vw, 920px); height: min(82vw, 920px); right: -18vw; top: 10vh; opacity: .2; margin: 0; pointer-events: none; }
+.lunar-background img { width: 100%; height: 100%; object-fit: contain; transform-origin: center; }
+.experience-lunar-page .experience-intro { padding-right: 0; min-height: 0; max-width: 800px; }
+@media(max-width:600px) { .experience-lunar-page .lunar-background { width: 125vw; height: 125vw; right: -48vw; top: 20vh; opacity: .16; } }
+.experience-lunar-page #experience { background: transparent; position: relative; z-index: 1; }
+.experience-lunar-page .lunar-background { z-index: 0; }
