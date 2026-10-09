@@ -1,102 +1,102 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="none">
-<defs><radialGradient id="wash"><stop stop-color="#eff5fc" stop-opacity=".9"/><stop offset=".7" stop-color="#e9e7f3" stop-opacity=".35"/><stop offset="1" stop-color="#fafbf8" stop-opacity="0"/></radialGradient><path id="type" d="M 320,51 A 269,269 0 1,1 319.9,51"/><clipPath id="moon"><circle r="20"/></clipPath></defs>
+<defs><radialGradient id="wash"><stop stop-color="#e6f2ff" stop-opacity=".9"/><stop offset=".7" stop-color="#ccdcff" stop-opacity=".35"/><stop offset="1" stop-color="#e6f2ff" stop-opacity="0"/></radialGradient><path id="type" d="M 320,51 A 269,269 0 1,1 319.9,51"/><clipPath id="moon"><circle r="20"/></clipPath></defs>
 <circle cx="320" cy="320" r="309" fill="url(#wash)"/>
-<g stroke="#9aa9c6"><circle cx="320" cy="320" r="253" stroke-width="2"/><circle cx="320" cy="320" r="246" stroke-width=".6"/><circle cx="320" cy="320" r="229"/><circle cx="320" cy="320" r="198" stroke-dasharray="4 6" opacity=".7"/><circle cx="320" cy="320" r="172"/><circle cx="320" cy="320" r="157" opacity=".5"/><circle cx="320" cy="320" r="58" opacity=".35"/></g>
-<g stroke="#b7aecf" stroke-width=".8" opacity=".75"><ellipse cx="320" cy="320" rx="300" ry="80" transform="rotate(-28 320 320)"/><ellipse cx="320" cy="320" rx="298" ry="74" transform="rotate(69 320 320)"/><path d="M320 91 520 435 120 435ZM320 549 120 205 520 205Z" opacity=".5"/></g>
-<text fill="#8b99b5" font-family="Georgia,serif" font-size="12" letter-spacing="6"><textPath href="#type" startOffset="3%">LITTLE WORLDS · LASTING FEELINGS · UNDER THE SAME MOON · </textPath></text>
-<path d="M495.00 320.00L508.00 320.00" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M494.04 338.29L501.00 339.02" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M491.18 356.38L498.02 357.84" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M486.43 374.08L493.09 376.24" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M479.87 391.18L486.27 394.03" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M471.55 407.50L482.81 414.00" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M461.58 422.86L467.24 426.98" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M450.05 437.10L455.25 441.78" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M437.10 450.05L441.78 455.25" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M422.86 461.58L426.98 467.24" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M407.50 471.55L414.00 482.81" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M391.18 479.87L394.03 486.27" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M374.08 486.43L376.24 493.09" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M356.38 491.18L357.84 498.02" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M338.29 494.04L339.02 501.00" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M320.00 495.00L320.00 508.00" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M301.71 494.04L300.98 501.00" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M283.62 491.18L282.16 498.02" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M265.92 486.43L263.76 493.09" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M248.82 479.87L245.97 486.27" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M232.50 471.55L226.00 482.81" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M217.14 461.58L213.02 467.24" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M202.90 450.05L198.22 455.25" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M189.95 437.10L184.75 441.78" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M178.42 422.86L172.76 426.98" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M168.45 407.50L157.19 414.00" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M160.13 391.18L153.73 394.03" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M153.57 374.08L146.91 376.24" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M148.82 356.38L141.98 357.84" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M145.96 338.29L139.00 339.02" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M145.00 320.00L132.00 320.00" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M145.96 301.71L139.00 300.98" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M148.82 283.62L141.98 282.16" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M153.57 265.92L146.91 263.76" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M160.13 248.82L153.73 245.97" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M168.45 232.50L157.19 226.00" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M178.42 217.14L172.76 213.02" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M189.95 202.90L184.75 198.22" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M202.90 189.95L198.22 184.75" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M217.14 178.42L213.02 172.76" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M232.50 168.45L226.00 157.19" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M248.82 160.13L245.97 153.73" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M265.92 153.57L263.76 146.91" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M283.62 148.82L282.16 141.98" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M301.71 145.96L300.98 139.00" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M320.00 145.00L320.00 132.00" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M338.29 145.96L339.02 139.00" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M356.38 148.82L357.84 141.98" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M374.08 153.57L376.24 146.91" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M391.18 160.13L394.03 153.73" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M407.50 168.45L414.00 157.19" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M422.86 178.42L426.98 172.76" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M437.10 189.95L441.78 184.75" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M450.05 202.90L455.25 198.22" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M461.58 217.14L467.24 213.02" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M471.55 232.50L482.81 226.00" stroke="#9baac1" stroke-width="1.5"/>
-<path d="M479.87 248.82L486.27 245.97" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M486.43 265.92L493.09 263.76" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M491.18 283.62L498.02 282.16" stroke="#9baac1" stroke-width="0.6"/>
-<path d="M494.04 301.71L501.00 300.98" stroke="#9baac1" stroke-width="0.6"/>
-<text x="320.00" y="182.00" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">XII</text>
-<text x="391.50" y="201.16" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">I</text>
-<text x="443.84" y="253.50" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">II</text>
-<text x="463.00" y="325.00" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">III</text>
-<text x="443.84" y="396.50" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">IV</text>
-<text x="391.50" y="448.84" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">V</text>
-<text x="320.00" y="468.00" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">VI</text>
-<text x="248.50" y="448.84" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">VII</text>
-<text x="196.16" y="396.50" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">VIII</text>
-<text x="177.00" y="325.00" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">IX</text>
-<text x="196.16" y="253.50" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">X</text>
-<text x="248.50" y="201.16" text-anchor="middle" fill="#8997b1" font-family="Georgia,serif" font-size="17">XI</text>
-<g transform="translate(320.00 107.00) rotate(0)"><circle r="24" stroke="#b3bed1" stroke-width=".8"/><circle r="20" fill="#a7b4d1"/><g clip-path="url(#moon)">
+<g stroke="#8b79d9"><circle cx="320" cy="320" r="253" stroke-width="2"/><circle cx="320" cy="320" r="246" stroke-width=".6"/><circle cx="320" cy="320" r="229"/><circle cx="320" cy="320" r="198" stroke-dasharray="4 6" opacity=".7"/><circle cx="320" cy="320" r="172"/><circle cx="320" cy="320" r="157" opacity=".5"/><circle cx="320" cy="320" r="58" opacity=".35"/></g>
+<g stroke="#8b79d9" stroke-width=".8" opacity=".75"><ellipse cx="320" cy="320" rx="300" ry="80" transform="rotate(-28 320 320)"/><ellipse cx="320" cy="320" rx="298" ry="74" transform="rotate(69 320 320)"/><path d="M320 91 520 435 120 435ZM320 549 120 205 520 205Z" opacity=".5"/></g>
+<text fill="#805ebf" font-family="Georgia,serif" font-size="12" letter-spacing="6"><textPath href="#type" startOffset="3%">LITTLE WORLDS · LASTING FEELINGS · UNDER THE SAME MOON · </textPath></text>
+<path d="M495.00 320.00L508.00 320.00" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M494.04 338.29L501.00 339.02" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M491.18 356.38L498.02 357.84" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M486.43 374.08L493.09 376.24" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M479.87 391.18L486.27 394.03" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M471.55 407.50L482.81 414.00" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M461.58 422.86L467.24 426.98" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M450.05 437.10L455.25 441.78" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M437.10 450.05L441.78 455.25" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M422.86 461.58L426.98 467.24" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M407.50 471.55L414.00 482.81" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M391.18 479.87L394.03 486.27" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M374.08 486.43L376.24 493.09" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M356.38 491.18L357.84 498.02" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M338.29 494.04L339.02 501.00" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M320.00 495.00L320.00 508.00" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M301.71 494.04L300.98 501.00" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M283.62 491.18L282.16 498.02" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M265.92 486.43L263.76 493.09" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M248.82 479.87L245.97 486.27" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M232.50 471.55L226.00 482.81" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M217.14 461.58L213.02 467.24" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M202.90 450.05L198.22 455.25" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M189.95 437.10L184.75 441.78" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M178.42 422.86L172.76 426.98" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M168.45 407.50L157.19 414.00" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M160.13 391.18L153.73 394.03" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M153.57 374.08L146.91 376.24" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M148.82 356.38L141.98 357.84" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M145.96 338.29L139.00 339.02" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M145.00 320.00L132.00 320.00" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M145.96 301.71L139.00 300.98" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M148.82 283.62L141.98 282.16" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M153.57 265.92L146.91 263.76" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M160.13 248.82L153.73 245.97" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M168.45 232.50L157.19 226.00" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M178.42 217.14L172.76 213.02" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M189.95 202.90L184.75 198.22" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M202.90 189.95L198.22 184.75" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M217.14 178.42L213.02 172.76" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M232.50 168.45L226.00 157.19" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M248.82 160.13L245.97 153.73" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M265.92 153.57L263.76 146.91" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M283.62 148.82L282.16 141.98" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M301.71 145.96L300.98 139.00" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M320.00 145.00L320.00 132.00" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M338.29 145.96L339.02 139.00" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M356.38 148.82L357.84 141.98" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M374.08 153.57L376.24 146.91" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M391.18 160.13L394.03 153.73" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M407.50 168.45L414.00 157.19" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M422.86 178.42L426.98 172.76" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M437.10 189.95L441.78 184.75" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M450.05 202.90L455.25 198.22" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M461.58 217.14L467.24 213.02" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M471.55 232.50L482.81 226.00" stroke="#8b79d9" stroke-width="1.5"/>
+<path d="M479.87 248.82L486.27 245.97" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M486.43 265.92L493.09 263.76" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M491.18 283.62L498.02 282.16" stroke="#8b79d9" stroke-width="0.6"/>
+<path d="M494.04 301.71L501.00 300.98" stroke="#8b79d9" stroke-width="0.6"/>
+<text x="320.00" y="182.00" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">XII</text>
+<text x="391.50" y="201.16" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">I</text>
+<text x="443.84" y="253.50" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">II</text>
+<text x="463.00" y="325.00" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">III</text>
+<text x="443.84" y="396.50" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">IV</text>
+<text x="391.50" y="448.84" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">V</text>
+<text x="320.00" y="468.00" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">VI</text>
+<text x="248.50" y="448.84" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">VII</text>
+<text x="196.16" y="396.50" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">VIII</text>
+<text x="177.00" y="325.00" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">IX</text>
+<text x="196.16" y="253.50" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">X</text>
+<text x="248.50" y="201.16" text-anchor="middle" fill="#6f46a6" font-family="Georgia,serif" font-size="17">XI</text>
+<g transform="translate(320.00 107.00) rotate(0)"><circle r="24" stroke="#9a99f2" stroke-width=".8"/><circle r="20" fill="#8b79d9"/><g clip-path="url(#moon)">
 </g></g>
-<g transform="translate(470.61 169.39) rotate(45)"><circle r="24" stroke="#b3bed1" stroke-width=".8"/><circle r="20" fill="#a7b4d1"/><g clip-path="url(#moon)">
-<ellipse cx="10" rx="15" ry="22" fill="#f8faf9"/>
+<g transform="translate(470.61 169.39) rotate(45)"><circle r="24" stroke="#9a99f2" stroke-width=".8"/><circle r="20" fill="#8b79d9"/><g clip-path="url(#moon)">
+<ellipse cx="10" rx="15" ry="22" fill="#e6f2ff"/>
 </g></g>
-<g transform="translate(533.00 320.00) rotate(90)"><circle r="24" stroke="#b3bed1" stroke-width=".8"/><circle r="20" fill="#a7b4d1"/><g clip-path="url(#moon)">
-<path d="M0 -20A20 20 0 0 1 0 20Z" fill="#f8faf9"/>
+<g transform="translate(533.00 320.00) rotate(90)"><circle r="24" stroke="#9a99f2" stroke-width=".8"/><circle r="20" fill="#8b79d9"/><g clip-path="url(#moon)">
+<path d="M0 -20A20 20 0 0 1 0 20Z" fill="#e6f2ff"/>
 </g></g>
-<g transform="translate(470.61 470.61) rotate(135)"><circle r="24" stroke="#b3bed1" stroke-width=".8"/><circle r="20" fill="#a7b4d1"/><g clip-path="url(#moon)">
-<ellipse cx="10" rx="25" ry="22" fill="#f8faf9"/>
+<g transform="translate(470.61 470.61) rotate(135)"><circle r="24" stroke="#9a99f2" stroke-width=".8"/><circle r="20" fill="#8b79d9"/><g clip-path="url(#moon)">
+<ellipse cx="10" rx="25" ry="22" fill="#e6f2ff"/>
 </g></g>
-<g transform="translate(320.00 533.00) rotate(180)"><circle r="24" stroke="#b3bed1" stroke-width=".8"/><circle r="20" fill="#a7b4d1"/><g clip-path="url(#moon)">
-<circle r="20" fill="#f8faf9"/>
+<g transform="translate(320.00 533.00) rotate(180)"><circle r="24" stroke="#9a99f2" stroke-width=".8"/><circle r="20" fill="#8b79d9"/><g clip-path="url(#moon)">
+<circle r="20" fill="#e6f2ff"/>
 </g></g>
-<g transform="translate(169.39 470.61) rotate(225)"><circle r="24" stroke="#b3bed1" stroke-width=".8"/><circle r="20" fill="#a7b4d1"/><g clip-path="url(#moon)">
-<ellipse cx="-10" rx="25" ry="22" fill="#f8faf9"/>
+<g transform="translate(169.39 470.61) rotate(225)"><circle r="24" stroke="#9a99f2" stroke-width=".8"/><circle r="20" fill="#8b79d9"/><g clip-path="url(#moon)">
+<ellipse cx="-10" rx="25" ry="22" fill="#e6f2ff"/>
 </g></g>
-<g transform="translate(107.00 320.00) rotate(270)"><circle r="24" stroke="#b3bed1" stroke-width=".8"/><circle r="20" fill="#a7b4d1"/><g clip-path="url(#moon)">
-<path d="M0 -20A20 20 0 0 0 0 20Z" fill="#f8faf9"/>
+<g transform="translate(107.00 320.00) rotate(270)"><circle r="24" stroke="#9a99f2" stroke-width=".8"/><circle r="20" fill="#8b79d9"/><g clip-path="url(#moon)">
+<path d="M0 -20A20 20 0 0 0 0 20Z" fill="#e6f2ff"/>
 </g></g>
-<g transform="translate(169.39 169.39) rotate(315)"><circle r="24" stroke="#b3bed1" stroke-width=".8"/><circle r="20" fill="#a7b4d1"/><g clip-path="url(#moon)">
-<ellipse cx="-10" rx="15" ry="22" fill="#f8faf9"/>
+<g transform="translate(169.39 169.39) rotate(315)"><circle r="24" stroke="#9a99f2" stroke-width=".8"/><circle r="20" fill="#8b79d9"/><g clip-path="url(#moon)">
+<ellipse cx="-10" rx="15" ry="22" fill="#e6f2ff"/>
 </g></g>
-<g stroke="#7e8eae" stroke-linecap="round"><path d="M320 320 253 269" stroke-width="3"/><path d="M320 320 443 341" stroke-width="2"/><circle cx="320" cy="320" r="5" fill="#fafbf8" stroke-width="2"/></g><g fill="#9aabc8"><path d="m79 204 4 10 10 4-10 4-4 10-4-10-10-4 10-4Z"/><path d="m556 374 5 12 12 5-12 5-5 12-5-12-12-5 12-5Z"/><path d="m196 72 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/><circle cx="504" cy="107" r="3"/><circle cx="143" cy="510" r="3"/></g></svg>
+<g stroke="#6f46a6" stroke-linecap="round"><path d="M320 320 253 269" stroke-width="3"/><path d="M320 320 443 341" stroke-width="2"/><circle cx="320" cy="320" r="5" fill="#e6f2ff" stroke-width="2"/></g><g fill="#8b79d9"><path d="m79 204 4 10 10 4-10 4-4 10-4-10-10-4 10-4Z"/><path d="m556 374 5 12 12 5-12 5-5 12-5-12-12-5 12-5Z"/><path d="m196 72 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/><circle cx="504" cy="107" r="3"/><circle cx="143" cy="510" r="3"/></g></svg>

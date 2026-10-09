@@ -6,7 +6,7 @@
     ornament.className = 'lunar-ornament';
     ornament.setAttribute('aria-hidden', 'true');
     const image = document.createElement('img');
-    image.src = 'img/decor/lunar-compass.svg'; image.alt = '';
+    image.src = 'img/decor/lunar-compass.svg?v=amethyst-1'; image.alt = '';
     ornament.append(image);
     const caption = document.createElement('span');
     caption.textContent = 'LUNAR ARCHIVE / 小小宇宙'; ornament.append(caption);
