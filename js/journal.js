@@ -38,7 +38,7 @@ try {
       $('.journal-intro').hidden = true;
       $('#journal-entry').hidden = false;
       document.title = `${post.title} — Diana’s Journal`;
-      $('#entry-subtitle').textContent = `${post.kind === 'plog' ? 'PLOG' : 'PHOTOGRAPHY'} / ${post.subtitle}`;
+      $('#entry-subtitle').textContent = `${post.kind === 'plog' ? 'PLOG' : 'PHOTOGRAPHY'} / ${post.subtitle}${post.date ? ' · ' + post.date : ''}`;
       $('#entry-title').textContent = post.title;
       $('#entry-note').textContent = post.note;
       activeImages = post.images;
